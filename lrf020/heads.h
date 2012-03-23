@@ -77,9 +77,8 @@ struct rf_uz2400d {
 	int tx_len;
 };
 
-#define SLV_SELECT rf_nop
-#define SLV_DESELECT rf_nop
-void rf_nop(void);
+#define SLV_SELECT() udelay(1)
+#define SLV_DESELECT() udelay(1)
 #define rf_delay udelay
 
 #endif
