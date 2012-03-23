@@ -1,0 +1,1 @@
+cmd_/opt/git-hub/linux_driver/lrf020/lrf020.ko := arm-linux-ld -EL -r   --build-id -o /opt/git-hub/linux_driver/lrf020/lrf020.ko /opt/git-hub/linux_driver/lrf020/lrf020.o /opt/git-hub/linux_driver/lrf020/lrf020.mod.o

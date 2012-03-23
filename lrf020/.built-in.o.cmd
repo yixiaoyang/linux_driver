@@ -1,0 +1,1 @@
+cmd_/opt/linux-driver/KernelDevolop/uz2400d/kernel/rf/built-in.o :=  rm -f /opt/linux-driver/KernelDevolop/uz2400d/kernel/rf/built-in.o; arm-linux-ar rcs /opt/linux-driver/KernelDevolop/uz2400d/kernel/rf/built-in.o
