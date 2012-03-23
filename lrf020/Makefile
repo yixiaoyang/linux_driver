@@ -13,8 +13,8 @@ DEBUG=y
 
 #obj-m	+=	rf.o
 #obj-m	:=	uz2400d.0
-obj-m 	:=	lrf020.o
-lrf020-objs	:=	rf.o uz2400d.o
+obj-m 	:=	$(MOD_NAME).o
+lrf020-objs	:=	rf.o uz2400d.o lrf020_main.o
 
 modules:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules -I $(INC)
@@ -23,6 +23,8 @@ uz2400d.o:uz2400d.c
 	$(CC) uz2400d.c -I $(INC)
 rf.o:rf.c
 	$(CC) rf.c -I $(INC)
+lrf020_main.o:lrf020.c
+	$(CC) lrf020_main.c -I $(INC)
 debug:
 	cat /var/log/messages | tail
 result:

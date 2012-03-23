@@ -1,8 +1,8 @@
-cmd_/opt/git-hub/linux_driver/lrf020/lrf020.mod.o := arm-linux-gcc -Wp,-MD,/opt/git-hub/linux_driver/lrf020/.lrf020.mod.o.d  -nostdinc -isystem /opt/soft/arm-linux-gcc/4.3.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/include -Iinclude  -I/opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include -include include/linux/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s3c2410/include -Iarch/arm/mach-s3c2400/include -Iarch/arm/mach-s3c2412/include -Iarch/arm/mach-s3c2440/include -Iarch/arm/mach-s3c2442/include -Iarch/arm/mach-s3c2443/include -Iarch/arm/plat-s3c24xx/include -Iarch/arm/plat-s3c/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -fno-delete-null-pointer-checks -O2 -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4t -mtune=arm9tdmi -msoft-float -Uarm -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(lrf020.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(lrf020)"  -DMODULE -c -o /opt/git-hub/linux_driver/lrf020/lrf020.mod.o /opt/git-hub/linux_driver/lrf020/lrf020.mod.c
+cmd_/opt/git-hub/linux_driver/lrf020/lrf020_main.o := arm-linux-gcc -Wp,-MD,/opt/git-hub/linux_driver/lrf020/.lrf020_main.o.d  -nostdinc -isystem /opt/soft/arm-linux-gcc/4.3.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/include -Iinclude  -I/opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include -include include/linux/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s3c2410/include -Iarch/arm/mach-s3c2400/include -Iarch/arm/mach-s3c2412/include -Iarch/arm/mach-s3c2440/include -Iarch/arm/mach-s3c2442/include -Iarch/arm/mach-s3c2443/include -Iarch/arm/plat-s3c24xx/include -Iarch/arm/plat-s3c/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -fno-delete-null-pointer-checks -O2 -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4t -mtune=arm9tdmi -msoft-float -Uarm -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow  -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(lrf020_main)"  -D"KBUILD_MODNAME=KBUILD_STR(lrf020)"  -c -o /opt/git-hub/linux_driver/lrf020/lrf020_main.o /opt/git-hub/linux_driver/lrf020/lrf020_main.c
 
-deps_/opt/git-hub/linux_driver/lrf020/lrf020.mod.o := \
-  /opt/git-hub/linux_driver/lrf020/lrf020.mod.c \
-    $(wildcard include/config/module/unload.h) \
+deps_/opt/git-hub/linux_driver/lrf020/lrf020_main.o := \
+  /opt/git-hub/linux_driver/lrf020/lrf020_main.c \
+  /opt/git-hub/linux_driver/lrf020/heads.h \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/modversions.h) \
@@ -12,6 +12,7 @@ deps_/opt/git-hub/linux_driver/lrf020/lrf020.mod.o := \
     $(wildcard include/config/markers.h) \
     $(wildcard include/config/tracepoints.h) \
     $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/module/unload.h) \
     $(wildcard include/config/smp.h) \
     $(wildcard include/config/sysfs.h) \
   include/linux/list.h \
@@ -295,9 +296,65 @@ deps_/opt/git-hub/linux_driver/lrf020/lrf020.mod.o := \
   include/linux/percpu-defs.h \
   /opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
-  include/linux/vermagic.h \
-  include/linux/utsrelease.h \
+  include/linux/fs.h \
+    $(wildcard include/config/dnotify.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/inotify.h) \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/debug/writecount.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/auditsyscall.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/fs/xip.h) \
+    $(wildcard include/config/migration.h) \
+  include/linux/limits.h \
+  include/linux/ioctl.h \
+  /opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include/asm/ioctl.h \
+  include/asm-generic/ioctl.h \
+  include/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist.h \
+  include/linux/path.h \
+  include/linux/radix-tree.h \
+  include/linux/prio_tree.h \
+  include/linux/pid.h \
+  include/linux/capability.h \
+    $(wildcard include/config/security/file/capabilities.h) \
+  include/linux/semaphore.h \
+  include/linux/fiemap.h \
+  include/linux/quota.h \
+  include/linux/dqblk_xfs.h \
+  include/linux/dqblk_v1.h \
+  include/linux/dqblk_v2.h \
+  include/linux/dqblk_qtree.h \
+  include/linux/nfs_fs_i.h \
+  include/linux/nfs.h \
+  include/linux/sunrpc/msg_prot.h \
+  include/linux/fcntl.h \
+  /opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include/asm/fcntl.h \
+  include/asm-generic/fcntl.h \
+  include/linux/err.h \
+  /opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include/asm/uaccess.h \
+  include/linux/device.h \
+    $(wildcard include/config/debug/devres.h) \
+  include/linux/ioport.h \
+  include/linux/klist.h \
+  include/linux/pm.h \
+    $(wildcard include/config/pm/sleep.h) \
+  /opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include/asm/device.h \
+    $(wildcard include/config/dmabounce.h) \
+  include/linux/pm_wakeup.h \
+    $(wildcard include/config/pm.h) \
+  include/linux/cdev.h \
+  include/linux/spi/spi.h \
+    $(wildcard include/config/spi.h) \
+  include/linux/delay.h \
+  /opt/linux/EmbedSky/linux-2.6.30.4/arch/arm/include/asm/delay.h \
+  /opt/git-hub/linux_driver/lrf020/rf.h \
+  /opt/git-hub/linux_driver/lrf020/ieee802_15_4.h \
+  /opt/git-hub/linux_driver/lrf020/uz2400d.h \
 
-/opt/git-hub/linux_driver/lrf020/lrf020.mod.o: $(deps_/opt/git-hub/linux_driver/lrf020/lrf020.mod.o)
+/opt/git-hub/linux_driver/lrf020/lrf020_main.o: $(deps_/opt/git-hub/linux_driver/lrf020/lrf020_main.o)
 
-$(deps_/opt/git-hub/linux_driver/lrf020/lrf020.mod.o):
+$(deps_/opt/git-hub/linux_driver/lrf020/lrf020_main.o):

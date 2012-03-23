@@ -11,6 +11,8 @@
 #include "uz2400d.h"
 #include "rf.h"
 
+/*in driver/spi/spi.c*/
+
 /*
  * Function: Write short address registers
  * Arg1: saddr: range from 0x00 to 0x3F
